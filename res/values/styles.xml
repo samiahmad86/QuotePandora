@@ -1,0 +1,8 @@
+<resources>
+ 
+   
+ <style name="ProgressBarStyle" parent="@android:style/Widget.ProgressBar.Horizontal"/>
+    <!-- Application theme. -->
+   
+
+</resources>

@@ -1,0 +1,71 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sam.ut.quotepandora"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+       >
+         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+           <meta-data android:name="com.google.android.gms.version"
+               android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.facebook.app.NativeAppCallContentProvider279607092237148"
+                  android:name="com.facebook.NativeAppCallContentProvider"
+                  android:exported="true"/>
+      <activity android:name="com.google.android.gms.ads.AdActivity"
+             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+         <activity
+            android:name="sam.ut.quotepandora.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+ 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+          <activity
+            android:name=".ImageGridActivity"
+            android:label="@string/ac_name_image_grid" />
+        <activity
+            android:name=".ImagePagerActivity"
+            android:label="@string/ac_name_image_pager" />
+        <activity
+            android:name=".ImageGalleryActivity"
+            android:label="@string/ac_name_image_gallery" />
+
+         <activity
+            android:name=".ShareActivity"
+            android:label="@string/ac_name_image_gallery" />
+        
+        
+        
+        <!-- Widget -->
+        <receiver android:name=".widget.UILWidgetProvider" >
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_provider" />
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <intent-filter>
+   <action android:name="android.intent.action.SEND" />
+   <category android:name="android.intent.category.DEFAULT" />
+   <data android:mimeType="image/*" />
+</intent-filter>
+        </receiver>
+       
+        <activity android:name="com.facebook.LoginActivity" android:label="@string/app_name"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="20dp" >
+ 
+    <com.facebook.widget.LoginButton
+        android:id="@+id/fb_login_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        facebook:confirm_logout="false"
+        facebook:fetch_user_info="true" />
+ 
+  <EditText
+    android:inputType="textMultiLine"
+    android:lines="8" 
+    android:minLines="3"
+    android:gravity="top|left" 
+    android:maxLines="10" 
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent" 
+    android:scrollbars="vertical" 
+   android:hint="Say something about this pic"
+    android:id="@+id/ed"
+/>
+   
+ 
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:id="@+id/img"/>
+ <Button
+        android:id="@+id/post_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="post image" />
+</LinearLayout>
